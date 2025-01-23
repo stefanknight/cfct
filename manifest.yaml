@@ -1,4 +1,5 @@
 ---
+#
 #Default region for deploying Custom Control Tower: Code Pipeline, Step functions, Lambda, SSM parameters, and StackSets
 region: <HOME_REGION_NAME>
 version: 2021-03-15
