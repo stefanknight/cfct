@@ -1,0 +1,13 @@
+---
+Parameters:
+  Env:
+    Type: String
+
+Resources:
+  LogGroup:
+    Type: AWS::Logs::LogGroup
+    DeletionPolicy: Delete
+    Properties:
+      Tags:
+        - Key: Environment
+          Value: !Ref Env

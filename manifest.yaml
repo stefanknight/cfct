@@ -40,6 +40,20 @@ resources:
     regions: # :type: list
       - us-east-1 
 
+  - name: stackset-3
+    resource_file: templates/log-group.yaml
+    deploy_method: stack_set
+    deployment_targets:
+      accounts:
+        - 869935068218
+    regions:
+      - us-east-1
+      - us-east-2
+    parameters:
+      - parameter_key: Env
+        parameter_value: Dev
+
+
   - name: test-preventive-guardrails
     description: To prevent from deleting or disabling resources in member accounts
     resource_file: policies/preventive-guardrails.json
